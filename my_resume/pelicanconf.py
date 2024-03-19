@@ -43,11 +43,11 @@ PIC = 'oliver_pic.png'
 
 # sidebar links
 EMAIL = 'wjt130@outlook.com'
-PHONE = '(+86) 1234567890'
-WEBSITE = 'suheb.in'
-LINKEDIN = 'suhebk'
-GITHUB = 'suheb'
-TWITTER = '@iamsuheb'
+PHONE = '(+86) 18841141760'
+WEBSITE = 'jintao35.github.io/resume'
+LINKEDIN = 'oliver'
+GITHUB = 'Jintao35'
+TWITTER = '@oliver'
 
 CAREER_SUMMARY = 'During five years work time, I pay attention to the cultivation of myself. Learning Java with its deep logic, get Spring original code and look into it, make sure understand projects working structure, study hard for every working chance, and also helping with each other in my working and study group. Cloud used experience as Ali cloud, Tencent cloud, Huawei cloud, and AWS is using now. Database used Mysql, Oracle and Postgresql. And I am also good at sql, python, shell, C, C++. With my understand from these, I think all develop language is a logic skin, the most importent thing is how to deal with problem as a right and simple way. Finally, in self hobits, it always table tennis, skateboarding and other sports. Keep work and life balance is good for me. Then I believe that joining the team will be a good journey of my life. Hope your opportunity. <br><br>Software Foundation:<br>1. Java and Spring Cloud project related is what I am goot at. Others like front end develop and cloud deploy is what I am familiar too.<br>2. Learning related software courses, computer software foundation, C language foundation, C++ language foundation, Matlab data algorithm and application, Verilog language foundation, microcomputer principle, etc..<br>3. Java training, programming foundation, master Java, HTML, C, C++, MyEclipse and MySql, familiar with Eclipse database, familiar with SSH, SSM framework and Web development process, know with CSS, JS, jQuery, Ajax. Have good coding habits and object-oriented programming ideas, have the spirit of continuous learning and perseverance.<br>4. Personal like AutoCAD, Solidworks, and with office software, master Photoshop, 3ds Max, Flash based applications, school used Multisim, MATLAB, know with assembly language programming, to understand the electrical and optical design.<br>'
 
