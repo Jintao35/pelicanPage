@@ -2,6 +2,18 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BT3-Flat" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_BT3/BT3-Flat" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_BT3/pelican-plugins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_flex/Flex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_haer/pelican-haerwu-theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_hyde/pelican-hyde" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_main_page/pelican-fh5co-marble" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_main_page/pelican-fh5co-marble-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_main_page/pelican-plugins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_main_page/pelican-plugins/pelican-plugins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_own/pelican-semantic-ui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my_own/pelican-twitchy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/my_resume/resume" vcs="Git" />
   </component>
 </project>
