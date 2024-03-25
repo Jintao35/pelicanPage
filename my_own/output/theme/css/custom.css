@@ -12,7 +12,7 @@ body {
 .intro {
     background: #32B4AA;
     background-image: url('/theme/images/background.png');
-    opacity: 0.7;
+    opacity: 0.9;
     height: 100vh;
     margin-top: 30px !important;
     margin-bottom: 60px !important;

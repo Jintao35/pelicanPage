@@ -24,3 +24,19 @@ function goToTab(tabNumber) {
     // 显示当前tab内容
     document.getElementById('tab' + tabNumber).style.display = 'block';
 }
+
+fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto_text')
+      const hitokotoFrom = document.getElementById('hitokoto_author')
+      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      hitokotoFrom.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      hitokoto.innerText = "「 " + data.hitokoto + " 」"
+      if(data.from_who == null){
+        hitokotoFrom.innerText = "——「" + data.from + "」"
+      }else{
+        hitokotoFrom.innerText = "—— " + data.from_who + "「" + data.from + "」"
+      }
+    })
+    .catch(console.error)
