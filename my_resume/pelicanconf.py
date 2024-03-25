@@ -74,12 +74,12 @@ SKILLS = [
     }
 ]
 
-PROJECT_INTRO = 'HongKong Cathay Pacific project, Ataff sign in management system'
+PROJECT_INTRO = 'HongKong Air project, Ataff sign in management system'
 
 PROJECTS = [
     {
-        'title': 'CPA CGO TEAM',
-        'tagline': 'HongKong Cathay Pacific project, about CGO related of my job is dealing with cargo running process such as plan, moving and estimate for air flight infomation.This project has benefited me greatly by using Java and SQL statements to complete the air flight business. Learned a lot about using AWS servers and Jenkins deploying operations. Improved my java coding level. Enhanced my sense of collaboration and worked happy with lovely colleagues.'
+        'title': 'CPP CGO TEAM',
+        'tagline': 'HongKong Air project, about CGO related of my job is dealing with cargo running process such as plan, moving and estimate for air flight infomation.This project has benefited me greatly by using Java and SQL statements to complete the air flight business. Learned a lot about using AWS servers and Jenkins deploying operations. Improved my java coding level. Enhanced my sense of collaboration and worked happy with lovely colleagues.'
     },
     {
         'title': 'Ataff sign in management system',
@@ -114,7 +114,7 @@ EXPERIENCES = [
         'job_title': 'Application Developer',
         'time': 'Sep 2021 - Present',
         'company': 'IBM',
-        'details': 'CPA CGO TEAM Developer for cargo related system until now.'
+        'details': 'CPP CGO TEAM Developer for cargo related system until now.'
     },
     {
         'job_title': 'Full Stack Developer',
