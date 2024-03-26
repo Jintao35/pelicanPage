@@ -48,20 +48,27 @@
                 <h1></h1>
                 <h1></h1>
                 <h1></h1>
-                <h1><a href="#" id="hitokoto_text">:D Hitokoto 一言 获取中...</a></h1>
-                <h3><a href="#" id="hitokoto_author">:D Hitokoto 一言 获取中...</a></h3>
+                <div id="loading" class="spinner" style="display:none;"></div>
+                <div id="showContent">
+                    <h1><a href="#" id="hitokoto_text">:D Hitokoto 一言 获取中...</a></h1>
+                    <h3><a href="#" id="hitokoto_author">:D Hitokoto 一言 获取中...</a></h3>
+                </div>
+                <h3><button class="refresh-button" onclick="callApi()">刷新</button></h3>
             </div>
         </div>
     </div>
 
     <ul class="tab">
-        <li class="active" onclick="goToTab(1)">精美壁纸</li>
-        <li onclick="goToTab(2)">热播动漫</li>
-        <li onclick="goToTab(3)">连载小说</li>
-        <li onclick="goToTab(4)">影视追剧</li>
-        <li onclick="goToTab(5)">图书漫画</li>
-        <li onclick="goToTab(6)">音乐有声</li>
-        <li onclick="goToTab(7)">优选其他</li>
+        <li class="active" onclick="goToTab(1)"><a>精美壁纸</a></li>
+        <li onclick="goToTab(2)"><a>动漫番剧</a></li>
+        <li onclick="goToTab(3)"><a>追剧系列</a></li>
+        <li onclick="goToTab(4)"><a>影视大片</a></li>
+        <li onclick="goToTab(5)"><a>图书小说</a></li>
+        <li onclick="goToTab(6)"><a>音乐有声</a></li>
+        <li onclick="goToTab(7)"><a>幽默段子</a></li>
+        <li onclick="goToTab(8)"><a>短剧视频</a></li>
+        <li onclick="goToTab(9)"><a>动图搞笑</a></li>
+        <li onclick="goToTab(10)"><a>优选其他</a></li>
     </ul>
     <div id="tab1" class="tab-content">
         <div class="overflow-hidden">
@@ -116,38 +123,626 @@
         </div>
     </div>
     <div id="tab2" class="tab-content" style="display:none;">
-        <div class="ui grid main container">
-            <div class="row">
-                <div class="column center aligned">
-                    <h1>热播动漫</h1>
-                    <h1>精彩内容还未开发</h1>
-                    <h1>敬请期待</h1>
-                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
-                </div>
+        <div class="overflow-hidden">
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200xf3rir6/i0046sewh4r.html?ptag=11974" class="item">
+                    <img src="/theme/dongman/douluo2.jpg" class="responsive-image">
+                    <h3>斗罗大陆Ⅱ绝世唐门</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/324olz7ilvo2j5f/i00350r6rf4.html" class="item">
+                    <img src="/theme/dongman/tunshi.jpg" class="responsive-image">
+                    <h3>吞噬星空</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc002007j7p5hn/k0042sids9q.html" class="item">
+                    <img src="/theme/dongman/shenyin.jpg" class="responsive-image">
+                    <h3>神印王座</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200aaogpgh/r0047gdjpw6.html" class="item">
+                    <img src="/theme/dongman/xianni.jpg" class="responsive-image">
+                    <h3>仙逆</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1d74ab0t9ug.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dongman/dazhuzai.jpg" class="responsive-image">
+                    <h3>大主宰</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc0020027yzd9e/q0043cz9x20.html?ptag=11974" class="item">
+                    <img src="/theme/dongman/doupo.jpg" class="responsive-image">
+                    <h3>斗破苍穹</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E6%AD%BB%E4%BA%A1%E7%AC%94%E8%AE%B0/1938752?fr=ge_ala" class="item">
+                    <img src="/theme/dongman/siwangbiji.jpg" class="responsive-image">
+                    <h3>死亡笔记</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200ddf1a1w/d0047nx15ze.html" class="item">
+                    <img src="/theme/dongman/emofaze.jpg" class="responsive-image">
+                    <h3>恶魔法则</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_o5999g9dp0.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dongman/nitianxieshen.jpg" class="responsive-image">
+                    <h3>逆天邪神</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep267851?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/guimiezhiren.jpg" class="responsive-image">
+                    <h3>鬼灭之刃</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV13K42117GA/?spm_id_from=333.337.search-card.all.click" class="item">
+                    <img src="/theme/dongman/jinjidejuren.jpg" class="responsive-image">
+                    <h3>进击的巨人</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rzj7563k.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dongman/youyao.jpg" class="responsive-image">
+                    <h3>有药</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep747610?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/maxiu.jpg" class="responsive-image">
+                    <h3>物理魔法使马修</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1jy421i7Ur/" class="item">
+                    <img src="/theme/dongman/jishengshou.jpg" class="responsive-image">
+                    <h3>寄生兽</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep756189?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/diyixulie.jpg" class="responsive-image">
+                    <h3>第一序列</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep508404?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/jiandie.jpg" class="responsive-image">
+                    <h3>间谍过家家</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://movie.douban.com/subject/36189343/" class="item">
+                    <img src="/theme/dongman/jiangshi100.jpg" class="responsive-image">
+                    <h3>僵尸100</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep341244?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/zongzhijiushi.jpg" class="responsive-image">
+                    <h3>总之就是非常可爱</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep766637?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/wodexingfuhunyue.jpg" class="responsive-image">
+                    <h3>我的幸福婚约</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep29919?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/fateZero.jpg" class="responsive-image">
+                    <h3>Fate/Zero</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep693247?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/guduyaogun.jpg" class="responsive-image">
+                    <h3>孤独摇滚</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/gu5m5d0ccelhqw9/r0026i211cw.html?ptag=11974" class="item">
+                    <img src="/theme/dongman/mingyunshi.jpg" class="responsive-image">
+                    <h3>命运石之门</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc0020098j8e13/l004778itj0.html" class="item">
+                    <img src="/theme/dongman/jinzhanfashi.jpg" class="responsive-image">
+                    <h3>近战法师</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200aoe8a04/u0047t9q77z.html" class="item">
+                    <img src="/theme/dongman/hongyue.jpg" class="responsive-image">
+                    <h3>从红月开始</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200fr1ry1o/m00441h6knj.html" class="item">
+                    <img src="/theme/dongman/maxiu.jpg" class="responsive-image">
+                    <h3>龙族</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.youku.com/v_show/id_XNTkxMDQxMzgyOA==.html?source=baidu&refer=sousuotoufang_market.qrwang_00002944_000000_QJFFvi_19031900" class="item">
+                    <img src="/theme/dongman/sishenqiannianxuezhan.jpg" class="responsive-image">
+                    <h3>死神千年血战篇</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200n53vkqc/v0046otbtmj.html" class="item">
+                    <img src="/theme/dongman/zhetian.jpg" class="responsive-image">
+                    <h3>遮天</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200s7yw866/h0047e5bu6f.html" class="item">
+                    <img src="/theme/dongman/zhoushuhuizhan.jpg" class="responsive-image">
+                    <h3>咒术回战</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep80016?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/siyueshinidehuangyan.jpg" class="responsive-image">
+                    <h3>四月是你的谎言</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E6%8B%A5%E6%9C%89%E8%B6%85%E5%B8%B8%E6%8A%80%E8%83%BD%E7%9A%84%E5%BC%82%E4%B8%96%E7%95%8C%E6%B5%81%E6%B5%AA%E7%BE%8E%E9%A3%9F%E5%AE%B6/62127071?fromModule=lemma_sense-layer#viewPageContent" class="item">
+                    <img src="/theme/dongman/yishijiemeishijia.jpg" class="responsive-image">
+                    <h3>异世界流浪美食家</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc002003yn04qh/b0048lawciy.html" class="item">
+                    <img src="/theme/dongman/kuangwang.jpg" class="responsive-image">
+                    <h3>狂王</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.youku.com/v_show/id_XNTkzNjcwOTkwOA==.html?source=baidu&refer=sousuotoufang_market.qrwang_00002944_000000_QJFFvi_19031900" class="item">
+                    <img src="/theme/dongman/shixiong.jpg" class="responsive-image">
+                    <h3>师兄啊师兄</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.szlntc.com/video/djssgdyj/" class="item">
+                    <img src="/theme/dongman/dongjingshishigui.jpg" class="responsive-image">
+                    <h3>东京食尸鬼</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E5%8B%87%E8%80%85%EF%BC%8C%E8%BE%9E%E8%81%8C%E4%B8%8D%E5%B9%B2%E4%BA%86/59689425?fr=ge_ala" class="item">
+                    <img src="/theme/dongman/yongzhecezhibuganle.jpg" class="responsive-image">
+                    <h3>勇者辞职不干了</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep173286?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/ziluolan.jpg" class="responsive-image">
+                    <h3>紫罗兰永恒花园</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep764227?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/huiyedaxiaojie.jpg" class="responsive-image">
+                    <h3>辉夜大小姐想让我告白</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/wplx79f0v0dlop3/j0026klh74j.html?ptag=10524" class="item">
+                    <img src="/theme/dongman/mokashaonvying.jpg" class="responsive-image">
+                    <h3>魔卡少女樱</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep764683?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dongman/baishengnv.jpg" class="responsive-image">
+                    <h3>白圣女与黑牧师</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mcv8hkc8zk8lnov/x0036x5qqsr.html" class="item">
+                    <img src="/theme/dongman/wanmei.jpg" class="responsive-image">
+                    <h3>完美世界</h3>
+                </a>
             </div>
         </div>
     </div>
     <div id="tab3" class="tab-content" style="display:none;">
-        <div class="ui grid main container">
-            <div class="row">
-                <div class="column center aligned">
-                    <h1>连载小说</h1>
-                    <h1>精彩内容还未开发</h1>
-                    <h1>敬请期待</h1>
-                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
-                </div>
+        <div class="overflow-hidden">
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_rm5ursjlis.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/tiancaijibenfa.jpg" class="responsive-image">
+                    <h3>天才基本法</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_xkt6z3z798.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/kuangbiao.jpg" class="responsive-image">
+                    <h3>狂飙</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E4%B8%80%E5%85%86%24%E6%B8%B8%E6%88%8F/63050151?fromtitle=%E4%B8%80%E5%85%86%E6%B8%B8%E6%88%8F&fromid=62975389&fr=aladdin" class="item">
+                    <img src="/theme/dianshiju/yizhaoyouxi.jpg" class="responsive-image">
+                    <h3>一兆$游戏</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200whsp9r6/a0047l69jnp.html" class="item">
+                    <img src="/theme/dianshiju/fanhua.jpg" class="responsive-image">
+                    <h3>繁花</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E8%B4%A2%E9%98%80X%E5%88%91%E8%AD%A6/63729463?fr=ge_ala" class="item">
+                    <img src="/theme/dianshiju/caifaXxingjing.jpg" class="responsive-image">
+                    <h3>财阀X刑警</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.qidun.cc/xcyy_detail/37748.html" class="item">
+                    <img src="/theme/dianshiju/heihualvshi.jpg" class="responsive-image">
+                    <h3>黑话律师</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="http://www.njxtt.com/hanguoju/siqijiangzhi/" class="item">
+                    <img src="/theme/dianshiju/siqijiangzhi.jpg" class="responsive-image">
+                    <h3>死期将至</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="http://www.hongda1718.com/voddetail/8292.html" class="item">
+                    <img src="/theme/dianshiju/caifajiadexiaoerzi.jpg" class="responsive-image">
+                    <h3>财阀家的小儿子</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E5%9B%BD%E6%B0%91%E6%AD%BB%E5%88%91%E6%8A%95%E7%A5%A8/62493230?fr=ge_ala" class="item">
+                    <img src="/theme/dianshiju/guominsixingtoupiao.jpg" class="responsive-image">
+                    <h3>国民死刑投票</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1rK421C7s7/" class="item">
+                    <img src="/theme/dianshiju/sharenzhedegouwuzhongxin.jpg" class="responsive-image">
+                    <h3>杀人者的购物中心</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.unscard.com/vodplay/74767-1-1.html" class="item">
+                    <img src="/theme/dianshiju/tianmijiayuan2.jpg" class="responsive-image">
+                    <h3>甜蜜家园2</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1Qm4y157rE/" class="item">
+                    <img src="/theme/dianshiju/chaoyinengzu.jpg" class="responsive-image">
+                    <h3>超异能族</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.szlntc.com/video/gsdzgs2022/" class="item">
+                    <img src="/theme/dianshiju/gaosidianzi.jpg" class="responsive-image">
+                    <h3>高斯电子公司</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc002007knmh3g/i0045u918s5.html" class="item">
+                    <img src="/theme/dianshiju/santi.jpg" class="responsive-image">
+                    <h3>三体</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/mzc00200p1bdcfe/f0048u04bgo.html?ptag=11972" class="item">
+                    <img src="/theme/dianshiju/manchangdejijie.jpg" class="responsive-image">
+                    <h3>漫长的季节</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rroc615w.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/langyabang.jpg" class="responsive-image">
+                    <h3>琅琊榜</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/rjae621myqca41h/i0032qxbi2v.html" class="item">
+                    <img src="/theme/dianshiju/qingyunian.jpg" class="responsive-image">
+                    <h3>庆余年</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1Xm4y1Y7e3/" class="item">
+                    <img src="/theme/dianshiju/wangguo.jpg" class="responsive-image">
+                    <h3>王国</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E6%88%91%E6%8A%8A%E7%A4%BE%E9%95%BF%E8%A7%A3%E9%94%81%E4%BA%86/62367832?fr=ge_ala" class="item">
+                    <img src="/theme/dianshiju/wobashezhangjiesuole.jpg" class="responsive-image">
+                    <h3>我把社长解锁了</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1g14y1H7dX/" class="item">
+                    <img src="/theme/dianshiju/zhichaowu.jpg" class="responsive-image">
+                    <h3>纸钞屋</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1b8vy0td37s.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/xianweijing.jpg" class="responsive-image">
+                    <h3>显微镜下的大明</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1wjtoztgblg.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/zichuan.jpg" class="responsive-image">
+                    <h3>紫川光明三杰</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.baidu.com/link?url=Ac89KMx7eVtnAX641c9pBZyhU8Gglm_DC-HpE14s2dN0rSzylcYaNQlw6Yl_f0dSGslzqG3K56NzWFTjAJIyUQRJ7-z9VtCu8rCX6CwR5i3&wd=&eqid=ecc6fa0c00473b120000000666028283" class="item">
+                    <img src="/theme/dianshiju/yuzui.jpg" class="responsive-image">
+                    <h3>余罪</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep781090?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dianshiju/chongqirensheng.jpg" class="responsive-image">
+                    <h3>重启人生</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://tv.cctv.com/2023/04/27/VIDE9RRTVMWQR3NJbCuz7zyT230427.shtml?srcfrom=baidualading&event2=bdtg_pc_hkafjzpq" class="item">
+                    <img src="/theme/dianshiju/daqinfu.jpg" class="responsive-image">
+                    <h3>大秦赋</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://tv.cctv.com/2023/07/10/VIDEamWUkj0LyiDSzquOL66q230710.shtml?srcfrom=baidualading&event2=bdtg_pc_hkafjzpq" class="item">
+                    <img src="/theme/dianshiju/juexingniandai.jpg" class="responsive-image">
+                    <h3>觉醒年代</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1z1joox3i38.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/qingqingrichang.jpg" class="responsive-image">
+                    <h3>卿卿日常</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/sqmkhre9cpq6t2y/a00235p3f13.html?ptag=11972" class="item">
+                    <img src="/theme/dianshiju/huanlesong.jpg" class="responsive-image">
+                    <h3>欢乐颂</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://movie.douban.com/subject/30156096/" class="item">
+                    <img src="/theme/dianshiju/renshideqizi.jpg" class="responsive-image">
+                    <h3>认识的妻子</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.youku.com/v_show/id_XMTgwNjc4NTE2.html?source=baidu&refer=sousuotoufang_market.qrwang_00002944_000000_QJFFvi_19031900" class="item">
+                    <img src="/theme/dianshiju/qianfu.jpg" class="responsive-image">
+                    <h3>潜伏</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1ax4y1r7uD/" class="item">
+                    <img src="/theme/dianshiju/qinghewolaogongjiehun.jpg" class="responsive-image">
+                    <h3>请和我的老公结婚</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1Ws41167mB/" class="item">
+                    <img src="/theme/dianshiju/weiweiyixiaohenqingcheng.jpg" class="responsive-image">
+                    <h3>微微一笑很倾城</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/j9xn8rw7avsdwke/y0021rjp0mx.html?ptag=11972" class="item">
+                    <img src="/theme/dianshiju/Wlianggeshijie.jpg" class="responsive-image">
+                    <h3>W两个世界</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.mgtv.com/b/307959/3713748.html?cxid=95kqkw8n6" class="item">
+                    <img src="/theme/dianshiju/xiangaichuansuoqiannian.jpg" class="responsive-image">
+                    <h3>相爱穿梭千年</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E4%BE%BF%E5%88%A9%E5%BA%97%E6%96%B0%E6%98%9F/24373531?fr=ge_ala" class="item">
+                    <img src="/theme/dianshiju/xinxingbianlidian.jpg" class="responsive-image">
+                    <h3>新星便利店</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1pb54e3ixts.html?vfm=2008_aldbd&fv=p_02_01" class="item">
+                    <img src="/theme/dianshiju/tiangengji.jpg" class="responsive-image">
+                    <h3>田耕纪</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/vkf8hhfj7uunkg6/q0020gxjurq.html?ptag=11972" class="item">
+                    <img src="/theme/dianshiju/xinhao.jpg" class="responsive-image">
+                    <h3>信号</h3>
+                </a>
             </div>
         </div>
     </div>
     <div id="tab4" class="tab-content" style="display:none;">
-        <div class="ui grid main container">
-            <div class="row">
-                <div class="column center aligned">
-                    <h1>影视追剧</h1>
-                    <h1>精彩内容还未开发</h1>
-                    <h1>敬请期待</h1>
-                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
-                </div>
+        <div class="overflow-hidden">
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/X%E6%88%98%E8%AD%A6/15839793?fromModule=lemma_sense-layer#viewPageContent" class="item">
+                    <img src="/theme/dianying/X战警.jpg" class="responsive-image">
+                    <h3>X战警</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_13a5cya0cj4.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/人生路不熟.jpg" class="responsive-image">
+                    <h3>人生路不熟</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.youku.com/v_show/id_XNTE5OTM1NDg0MA==.html?source=baidu&refer=sousuotoufang_market.qrwang_00002944_000000_QJFFvi_19031900" class="item">
+                    <img src="/theme/dianying/你的名字.jpg" class="responsive-image">
+                    <h3>你的名字</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_21cj4qlmmy4.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/八角笼中.jpg" class="responsive-image">
+                    <h3>八角笼中</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/ltkwb2gm0sgm3hx.html?ptag=11973" class="item">
+                    <img src="/theme/dianying/前目的地.jpg" class="responsive-image">
+                    <h3>前目的地</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rrjdlis4.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/剑雨.jpg" class="responsive-image">
+                    <h3>剑雨</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.bilibili.com/bangumi/play/ep251427?bsource=baidu_aladdin" class="item">
+                    <img src="/theme/dianying/变形金刚.jpg" class="responsive-image">
+                    <h3>变形金刚</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E5%A4%8D%E4%BB%87%E8%80%85%E8%81%94%E7%9B%9F/17609141?fromModule=lemma_sense-layer#viewPageContent" class="item">
+                    <img src="/theme/dianying/复仇者联盟.jpg" class="responsive-image">
+                    <h3>复仇者联盟</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.le.com/ptv/vplay/31539655.html?ch=baidu_ffdsj&from=baidu_so&site=baidu_all" class="item">
+                    <img src="/theme/dianying/大人物.jpg" class="responsive-image">
+                    <h3>大人物</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/eit2dam14jdqele.html?ptag=10521" class="item">
+                    <img src="/theme/dianying/天才少女.jpg" class="responsive-image">
+                    <h3>天才少女</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E5%A5%87%E5%BC%82%E5%8D%9A%E5%A3%AB/2492942?fromModule=lemma_sense-layer#viewPageContent" class="item">
+                    <img src="/theme/dianying/奇异博士.jpg" class="responsive-image">
+                    <h3>奇异博士</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_2bh3doltkq4.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/封神第一部朝歌风云.jpg" class="responsive-image">
+                    <h3>封神:朝歌风云</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_uvhs30ayzw.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/惊奇队长.jpg" class="responsive-image">
+                    <h3>惊奇队长2</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.mgtv.com/b/54665/2928416.html?cxid=95kqkw8n6" class="item">
+                    <img src="/theme/dianying/战狼.jpg" class="responsive-image">
+                    <h3>战狼</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1l52dm2on34.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/扫毒3人在天涯.jpg" class="responsive-image">
+                    <h3>扫毒3人在天涯</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_1qzx9b00hs4.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/新神榜杨戬.jpg" class="responsive-image">
+                    <h3>新神榜杨戬</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rrdgdwpg.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/无双.jpg" class="responsive-image">
+                    <h3>无双</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rr7qhp7c.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/星际穿越.jpg" class="responsive-image">
+                    <h3>星际穿越</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://v.qq.com/x/cover/ifkvg8oxkturb8p/s0029awlt3s.html?ptag=10521" class="item">
+                    <img src="/theme/dianying/机械师.jpg" class="responsive-image">
+                    <h3>机械师</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rqu3kaiw.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/正义联盟.jpg" class="responsive-image">
+                    <h3>正义联盟</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rr7q1s5w.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/死侍.jpg" class="responsive-image">
+                    <h3>死侍</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_19rrfe142o.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/流浪地球.jpg" class="responsive-image">
+                    <h3>流浪地球</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://www.iqiyi.com/v_mza85efu5s.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01" class="item">
+                    <img src="/theme/dianying/满江红.jpg" class="responsive-image">
+                    <h3>满江红</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E7%81%B5%E9%AD%82%E8%84%B1%E7%A6%BB%E8%80%85/23247653?fr=ge_ala" class="item">
+                    <img src="/theme/dianying/灵魂脱离者.jpg" class="responsive-image">
+                    <h3>灵魂脱离者</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E7%8A%AF%E7%BD%AA%E9%83%BD%E5%B8%82/22106717?fromModule=lemma_sense-layer#viewPageContent" class="item">
+                    <img src="/theme/dianying/犯罪都市.jpg" class="responsive-image">
+                    <h3>犯罪都市</h3>
+                </a>
+            </div>
+            <div class="dong-man-card float">
+                <a target="_blank" href="https://baike.baidu.com/item/%E7%8C%A9%E7%90%83%E5%B4%9B%E8%B5%B7/10722443?fr=ge_ala" class="item">
+                    <img src="/theme/dianying/猩球崛起.jpg" class="responsive-image">
+                    <h3>猩球崛起</h3>
+                </a>
             </div>
         </div>
     </div>
@@ -155,7 +750,7 @@
         <div class="ui grid main container">
             <div class="row">
                 <div class="column center aligned">
-                    <h1>图书漫画</h1>
+                    <h1>图书小说</h1>
                     <h1>精彩内容还未开发</h1>
                     <h1>敬请期待</h1>
                     <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
@@ -176,6 +771,42 @@
         </div>
     </div>
     <div id="tab7" class="tab-content" style="display:none;">
+        <div class="ui grid main container">
+            <div class="row">
+                <div class="column center aligned">
+                    <h1>幽默段子</h1>
+                    <h1>精彩内容还未开发</h1>
+                    <h1>敬请期待</h1>
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab8" class="tab-content" style="display:none;">
+        <div class="ui grid main container">
+            <div class="row">
+                <div class="column center aligned">
+                    <h1>短剧视频</h1>
+                    <h1>精彩内容还未开发</h1>
+                    <h1>敬请期待</h1>
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab9" class="tab-content" style="display:none;">
+        <div class="ui grid main container">
+            <div class="row">
+                <div class="column center aligned">
+                    <h1>动图搞笑</h1>
+                    <h1>精彩内容还未开发</h1>
+                    <h1>敬请期待</h1>
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;。。。</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab10" class="tab-content" style="display:none;">
         <div class="ui grid main container">
             <div class="row">
                 <div class="column center aligned">
