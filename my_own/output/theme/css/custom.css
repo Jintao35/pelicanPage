@@ -106,6 +106,22 @@ li a:hover::before {
     border-bottom: 1px solid #eee;
     padding: 100px !important;
     color: rgba(255, 255, 255, 0.8);
+    animation: haha 18s infinite;
+}
+
+@keyframes haha {
+  5% {
+    background-position: 0% 50%;
+  }
+  20% {
+    background-position: 100% 50%;
+  }
+  40% {
+    background-position: 0% 50%;
+  }
+  60% {
+    background-position: 100% 50%;
+  }
 }
 
 .articles {
@@ -268,3 +284,4 @@ li a:hover::before {
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
