@@ -207,6 +207,14 @@ li a:hover::before {
 	height: auto;
 }
 
+.card img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -227,10 +235,15 @@ li a:hover::before {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.dong-man-card:hover img {
+    transform: scale(1.2);
+}
+
 .dong-man-card img {
     min-height: 280px;
     max-height: 280px;
     overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
 .dong-man-card {
@@ -256,6 +269,11 @@ li a:hover::before {
     min-height: 70px;
     max-height: 70px;
     overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.music-card:hover img {
+    transform: scale(1.2);
 }
 
 .music-card {
