@@ -7678,6 +7678,9 @@ button.close {
   text-align: center;
   color: white;
 }
+.menu-bg {
+  background-image: url("../images/bg4.jpg");
+}
 /* line 20, ../sass/base/_layout.scss */
 .hero > h1 {
   font-weight: 700;
