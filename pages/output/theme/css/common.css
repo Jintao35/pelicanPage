@@ -7686,6 +7686,14 @@ button.close {
 .dianying-bg {
   background-image: url("../images/dianying.jpg");
 }
+
+.dianshiju-bg {
+  background-image: url("../images/dianshiju.jpg");
+}
+
+.xiaoshuo-bg {
+  background-image: url("../images/xiaoshuo.jpg");
+}
 /* line 20, ../sass/base/_layout.scss */
 .hero > h1 {
   font-weight: 700;
