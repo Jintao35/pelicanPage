@@ -233,6 +233,9 @@ function loadData() {
             const menuH22 = document.createElement('h2');
             menuH22.innerHTML = '胜率汇总';
             navMenu.appendChild(menuH22);
+            const menuH30 = document.createElement('h4');
+            menuH30.innerHTML = '总对局天数 : '+dataList.length;
+            navMenu.appendChild(menuH30);
             const menuH40 = document.createElement('h4');
             menuH40.innerHTML = '总对局次数 : '+menuAllNum;
             navMenu.appendChild(menuH40);

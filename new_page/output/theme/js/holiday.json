@@ -11,6 +11,14 @@
     {
       "year-month" : "2024-10",
       "rest-day": [1,2,3,4]
+    },
+    {
+      "year-month" : "2024-11",
+      "rest-day": []
+    },
+    {
+      "year-month" : "2024-12",
+      "rest-day": [25,30,31]
     }
   ]
 }
